@@ -16,3 +16,8 @@
     margin-bottom: $space;
     font-size: $content-size;
 }
+
+
+@mixin transition-ease {
+    transition: all 0.5s ease-in-out;
+}

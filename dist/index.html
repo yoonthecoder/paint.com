@@ -6,6 +6,7 @@
     <link rel="icon" 
       type="image/png" 
       href="img/logo.png">
+    <link rel="stylesheet" href="css/aos.css">
     <link rel="stylesheet" href="css/main.css">
     <title>Paint.com</title>
 </head>
@@ -23,9 +24,12 @@
             </ul>
         </nav>
         <div class="header-content">
-            <h1>Welcome to paint.com</h1>
-            <p>Paint.com is a community for painters of every level. We are an all-in-one platform made by artists, for artists looking to learn or improve their skills through online classes and discussion forums.</p>
-            <div class="header-btn-container">
+            <h1 data-aos="fade-down"
+            data-aos-duration="1000">Welcome to paint.com</h1>
+            <p data-aos="fade-down"
+            data-aos-duration="1000">Paint.com is a community for painters of every level. We are an all-in-one platform made by artists, for artists looking to learn or improve their skills through online classes and discussion forums.</p>
+            <div class="header-btn-container" data-aos="fade-down"
+            data-aos-duration="1000">
                 <button class="learn-btn btn">Learn More</button>
                 <button class="signup-btn btn">Create Account</button>
             </div>
@@ -33,7 +37,8 @@
     </header>
 
     <section class="about">
-        <div class="about-left">
+        <div class="about-left" data-aos="fade-right"
+        data-aos-duration="1000">
             <img src="img/about.png" alt="about-bg">
         </div>
         <div class="about-right">
@@ -75,7 +80,7 @@
     </section>
 
     <section class="contact">
-        <h3>p.s.: we send cute mail!</h3>
+        <h3>p.s: we send cute mail!</h3>
         <p> Sign up to receive emails you'll actually want to read: new classes, discounts, what's happening...:)</p>
         <form>
             <div class="form-row1">
@@ -116,6 +121,7 @@
             </ul>
         </div>
     </footer>
-    <script src="main.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
