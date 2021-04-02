@@ -27,8 +27,8 @@ a {
 .btn:hover {
   -webkit-filter: brightness(90%);
           filter: brightness(90%);
-  -webkit-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 header {
@@ -52,8 +52,10 @@ header nav {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 2rem 10%;
+  padding: 1rem 10%;
   font-size: 1.3rem;
+  position: fixed;
+  width: 100%;
 }
 
 header nav .logo-container {
@@ -61,7 +63,7 @@ header nav .logo-container {
 }
 
 header nav .logo-container img {
-  width: 15rem;
+  width: 10rem;
 }
 
 header nav .nav-items {
@@ -76,6 +78,37 @@ header nav .nav-items li {
 
 header nav .nav-items li a {
   color: #000;
+  position: relative;
+}
+
+header nav .nav-items li a:hover:after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  width: 100%;
+  height: 50%;
+  top: 14px;
+  border-radius: 0.2rem;
+  z-index: -1;
+  left: 0;
+  background-color: #ffe1e1;
+  -webkit-animation-name: underline;
+          animation-name: underline;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+header .scroll-nav {
+  -webkit-box-shadow: 0 1px 10px 2px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 1px 10px 2px rgba(0, 0, 0, 0.2);
+  background-color: #E6EAF6;
+  z-index: 10;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 header .header-content {
@@ -117,6 +150,9 @@ header .header-content .signup-btn {
   width: 100%;
   height: 100vh;
   position: relative;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .about .about-left img {
@@ -135,7 +171,7 @@ header .header-content .signup-btn {
   font-size: 1.2rem;
 }
 
-.about .about-right .about-btn {
+.about .about-right button {
   background-color: #e3ffea;
 }
 
@@ -197,12 +233,31 @@ header .header-content .signup-btn {
   border-radius: 2rem;
 }
 
+.classes .class-list .class-item .class-img img:hover {
+  -webkit-filter: brightness(70%);
+          filter: brightness(70%);
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
 .classes .class-list .class-item h3 {
   text-align: center;
   font-weight: 400;
   font-size: 2rem;
   margin-bottom: 1.8rem;
   text-align: center;
+}
+
+.classes .class-list .class-item h3:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  color: #f4e3ff;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .classes .class-list .class-item p {
@@ -337,5 +392,50 @@ footer .footer-item .social-icons a {
 
 footer .footer-item .social-icons a img {
   width: 2.5rem;
+}
+
+.underline {
+  position: relative;
+}
+
+.underline:after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  width: 100%;
+  height: 50%;
+  top: 40px;
+  border-radius: 0.2rem;
+  z-index: -1;
+  left: 0;
+  background-color: #f4e3ff;
+  -webkit-animation-name: underline;
+          animation-name: underline;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+}
+
+@-webkit-keyframes underline {
+  0% {
+    width: 0;
+    opacity: 0.3;
+  }
+  50% {
+    width: 100%;
+    opacity: 1;
+  }
+}
+
+@keyframes underline {
+  0% {
+    width: 0;
+    opacity: 0.3;
+  }
+  50% {
+    width: 100%;
+    opacity: 1;
+  }
 }
 /*# sourceMappingURL=main.css.map */
