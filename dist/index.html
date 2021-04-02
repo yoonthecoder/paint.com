@@ -13,7 +13,7 @@
     <header>
         <nav>
             <div class="logo-container">
-                <img src="img/logo.png" alt="logo">
+                <a href="index.html"><img src="img/logo.png" alt="logo"></a>
             </div>
             <ul class="nav-items">
                 <li><a href="#">About</a></li>
@@ -31,6 +31,7 @@
             </div>
         </div>
     </header>
+
     <section class="about">
         <div class="about-left">
             <img src="img/about.png" alt="about-bg">
@@ -41,20 +42,28 @@
             <button class="about-btn btn">Learn More</button>
         </div>
     </section>
+  
     <section class="classes">
+        <h1>Classes</h1>
         <div class="class-list">
             <div class="class-item">
-                <img src="img/class1.jpg" alt="class1">
+                <div class="class-img">
+                    <img src="img/class1.jpg" alt="class1">
+                </div>
                 <h3 class="class-name"> Home & DIY</h3>
                 <p class="class-intro">Choosing the right paint for your next home renovation</p>
             </div>
             <div class="class-item">
-                <img src="img/class2.jpg" alt="class2">
+                <div class="class-img">
+                    <img src="img/class2.jpg" alt="class2">
+                </div>
                 <h3 class="class-name"> Painting with Children</h3>
                 <p class="class-intro">Fun and safe ideas to enjoy with the whole family</p>
             </div>
             <div class="class-item">
-                <img src="img/class3.jpg" alt="class3">
+                <div class="class-img">
+                    <img src="img/class3.jpg" alt="class3">
+                </div>
                 <h3 class="class-name"> Beginners Circle</h3>
                 <p class="class-intro">Just starting? Here are some best paint kits for new painter</p>
             </div>
@@ -64,38 +73,46 @@
         </div>
         
     </section>
+
     <section class="contact">
         <h3>p.s.: we send cute mail!</h3>
         <p> Sign up to receive emails you'll actually want to read: new classes, discounts, what's happening...:)</p>
         <form>
-            <input type="text" placeholder="Your First Name">
-            <input type="text" placeholder="Your Last Name">
+            <div class="form-row1">
+                <input type="text" id="firstname" placeholder="Your First Name">
+                <input type="text" id="lastname" placeholder="Your Last Name">
+            </div>
+           <div class="form-row">
             <input type="text" placeholder="Your Email Address">
+           </div>
+            
         </form>
         <button class="subscribe-btn btn" type="submit">Subscribe</button>
     </section>
+
     <footer>
-        <div class="footer-about">
+        <div class="footer-item">
+            <span>About Us</span>
             <ul>
-                <span>About Us</span>
                 <li><a href="#">Our story</a></li>
                 <li><a href="#">Community</a></li>
                 <li><a href="#">Classes</a></li>
             </ul>
         </div>
-        <div class="footer-help">
+        <div class="footer-item">
+            <span>Need Help?</span>
             <ul>
-                <span>Need Help?</span>
                 <li><a href="#">FAQ</a></li>
                 <li><a href="#">Contact Us</a></li>
             </ul>
         </div>
-        <div class="footer-follow">
-            <ul>
-                <span>Follow Us!</span>
-                <li><a href="#">Our story</a></li>
-                <li><a href="#">Community</a></li>
-                <li><a href="#">Classes</a></li>
+        <div class="footer-item">
+            <span>Follow Us!</span>
+            <ul class="social-icons">
+               <li><a href="#"><img class="social-cin" src="/dist/img/instagram.png"></a></li> 
+                <li><a href="#"><img class="social-cin" src="/dist/img/youtube.png"></a></li>
+                <li><a href="#"><img class="social-cin" src="/dist/img/tiktok.png"></a></li>
+                <li><a href="#"><img class="social-cin" src="/dist/img/pinterest.png"></a></li>
             </ul>
         </div>
     </footer>

@@ -1,0 +1,18 @@
+@mixin custom-h1 {
+    font-size: $heading-size;
+    font-weight: 400;
+    margin-bottom: $space;
+}
+
+@mixin custom-h3 {
+    font-weight: 400;
+    font-size: 2rem;
+    margin-bottom: $space;
+    text-align: center;
+}
+
+@mixin custom-p {
+    font-family: $mukta-font;
+    margin-bottom: $space;
+    font-size: $content-size;
+}
