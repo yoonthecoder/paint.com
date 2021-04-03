@@ -1,0 +1,116 @@
+@import 'config';
+
+.login-modal {
+    display: none;
+    background-color: #FFFFFA;
+    width: 60%;
+    min-width: 20rem;
+    height: 40rem;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding: 5rem;
+    z-index: 20;
+    
+    .container{
+        position: relative;
+
+        .close-btn {
+            position: absolute;
+            width: 2rem;
+            top: 0;
+            right: 10px;
+            cursor: pointer;
+        }
+
+        .logo-container {
+            display: flex;
+            justify-content: center;
+      
+            img {
+                width: 15rem;
+            }
+        }
+    
+        h3 {
+            @include custom-h3;
+            margin-bottom: 1rem;
+        }
+    
+        .login-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+    
+            form {
+                display: flex;
+                flex-direction: column; 
+                width: 20rem;
+                margin-bottom: 2rem;
+    
+                input {
+                    border: 3px solid #ccc;
+                    border-radius: 5px;
+                    padding: 0.3rem;
+                }
+                label {
+                    font-family: $mukta-font;
+                }
+            }
+    
+            .login-btn-container {
+                width: 20rem;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+    
+                button {
+                    cursor: pointer;
+                    font-family: $mukta-font;
+                    font-size: 1.3rem;
+                    border: none;
+                    border-radius: 0.2rem;
+                    background-color: $blue;
+                    width: 80%;
+                    margin-bottom: 0.5rem;
+                }
+    
+                span {
+              
+                    font-family: $mukta-font;
+    
+                    a {
+                        text-decoration: underline;
+                        color:black;
+                    }
+                }
+            }
+    
+            .login-signup {
+                width: 40rem;
+                display: flex;
+                justify-content: center;
+                position: absolute;
+                bottom: -50%;
+    
+                span {
+                    font-family: $mukta-font;
+                }
+    
+                 button {
+                    cursor: pointer;
+                    font-family: $mukta-font;
+                    font-size: 1rem;
+                    padding: 0.1rem 0.5rem;
+                    border: none;
+                    background-color: $yellow;
+                    margin-left: 1rem;
+                    margin-bottom: 0.5rem;
+                    border-radius: 0.2rem;
+                }
+            }
+    }
+    }}
