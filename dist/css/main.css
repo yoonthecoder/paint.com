@@ -141,9 +141,9 @@ a {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    z-index: 20;
+    z-index: 2;
   }
-  .nav-items {
+  nav .nav-items {
     position: absolute;
     right: 0px;
     height: 100vh;
@@ -159,6 +159,9 @@ a {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     width: 100%;
     -webkit-transform: translateX(100%);
             transform: translateX(100%);
@@ -166,10 +169,56 @@ a {
     transition: -webkit-transform 0.5s ease;
     transition: transform 0.5s ease;
     transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+    font-size: 2rem;
   }
-  .nav-active {
+  nav .nav-active {
     -webkit-transform: translateX(0%);
             transform: translateX(0%);
+  }
+  header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  header .header-content {
+    position: absolute;
+    top: 55%;
+    left: 10%;
+    padding-top: 40px;
+    width: 30rem;
+  }
+  header .header-content .header-btn-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  header .header-content .header-btn-container .learn-btn {
+    margin-bottom: 1rem;
+  }
+  .about {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .about .about-right h1 {
+    margin-top: 3rem;
+  }
+  .about .about-right p {
+    font-size: 1rem;
+  }
+  footer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  footer .footer-item {
+    margin-bottom: 2rem;
   }
 }
 
@@ -519,21 +568,11 @@ a {
   color: black;
 }
 
-header {
-  width: 100%;
-  height: 100vh;
-  background: url(/dist/img/header-bg.jpg);
-  background-repeat: no-repeat;
-  background-position: 40% 60%;
-  background-size: cover;
-  overflow: hidden;
-  position: relative;
-}
-
-header nav {
+nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  background-color: #E6EAF6;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -544,32 +583,33 @@ header nav {
   font-size: 1.3rem;
   position: fixed;
   width: 100%;
+  z-index: 20;
 }
 
-header nav .logo-container {
+nav .logo-container {
   width: 10%;
 }
 
-header nav .logo-container img {
+nav .logo-container img {
   width: 10rem;
 }
 
-header nav .nav-items {
+nav .nav-items {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-header nav .nav-items li {
+nav .nav-items li {
   margin: 0 1.5rem;
 }
 
-header nav .nav-items li a {
+nav .nav-items li a {
   color: #000;
   position: relative;
 }
 
-header nav .nav-items li a:hover:after {
+nav .nav-items li a:hover:after {
   content: "";
   display: inline-block;
   position: absolute;
@@ -577,8 +617,8 @@ header nav .nav-items li a:hover:after {
   height: 50%;
   top: 14px;
   border-radius: 0.2rem;
-  z-index: -1;
   left: 0;
+  z-index: -1;
   background-color: #ffe1e1;
   -webkit-animation-name: underline;
           animation-name: underline;
@@ -590,7 +630,7 @@ header nav .nav-items li a:hover:after {
   transition: all 0.3s ease;
 }
 
-header .scroll-nav {
+nav .scroll-nav {
   -webkit-box-shadow: 0 1px 10px 2px rgba(0, 0, 0, 0.2);
           box-shadow: 0 1px 10px 2px rgba(0, 0, 0, 0.2);
   background-color: #E6EAF6;
@@ -599,14 +639,24 @@ header .scroll-nav {
   transition: all 0.3s ease;
 }
 
+header {
+  width: 100%;
+  height: 100vh;
+  background: url(/dist/img/header-bg.jpg);
+  background-repeat: no-repeat;
+  background-position: 40% 60%;
+  background-size: cover;
+  overflow: hidden;
+  position: relative;
+}
+
 header .header-content {
   padding-left: 10%;
   position: absolute;
   top: 55%;
-  left: 0%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
-  width: 45rem;
+  width: 60%;
 }
 
 header .header-content h1 {
@@ -621,11 +671,11 @@ header .header-content p {
   font-size: 1.2rem;
 }
 
-header .header-content .learn-btn {
+header .header-content .header-btn-container .learn-btn {
   background-color: #ffe1e1;
 }
 
-header .header-content .signup-btn {
+header .header-content .header-btn-container .signup-btn {
   background-color: #ffffe3;
 }
 
