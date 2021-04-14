@@ -918,7 +918,7 @@ nav .scroll-nav {
 header {
   width: 100%;
   height: 100vh;
-  background: url(/dist/img/header-bg.jpg);
+  background: url(../img/header-bg.jpg);
   background-repeat: no-repeat;
   background-position: 40% 60%;
   background-size: cover;
@@ -932,7 +932,6 @@ header .header-content {
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   width: 60%;
-  height: 100%;
 }
 
 header .header-content h1 {
