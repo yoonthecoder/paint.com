@@ -70,9 +70,8 @@ header {
     background-repeat: no-repeat;
     background-position: 40% 60%;
     background-size: cover;
-    overflow: hidden;
     position: relative;
-
+ 
 
 
     .header-content {
@@ -81,9 +80,9 @@ header {
         top: 55%;
         transform: translateY(-50%);
         width: 60%;
+        height: 100%;
 
         h1 {
-            
            @include custom-h1;
         }
 
@@ -357,3 +356,4 @@ footer {
       opacity: 1;
     }
   }
+

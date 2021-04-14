@@ -124,102 +124,124 @@ a {
   transition: all 0.3s ease;
 }
 
-@media screen and (max-width: 1024px) {
-  .classes .class-list {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
+.signup-modal {
+  display: none;
+  background-color: #FFFFFA;
+  width: 60%;
+  min-width: 20rem;
+  height: 40rem;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  padding: 5rem;
+  z-index: 20;
 }
 
-@media screen and (max-width: 768px) {
-  .hamburger {
-    display: block;
-  }
-  nav {
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    z-index: 2;
-  }
-  nav .nav-items {
-    position: absolute;
-    right: 0px;
-    height: 100vh;
-    background-color: #E6EAF6;
-    top: 84px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    width: 100%;
-    -webkit-transform: translateX(100%);
-            transform: translateX(100%);
-    -webkit-transition: -webkit-transform 0.5s ease;
-    transition: -webkit-transform 0.5s ease;
-    transition: transform 0.5s ease;
-    transition: transform 0.5s ease, -webkit-transform 0.5s ease;
-    font-size: 2rem;
-  }
-  nav .nav-active {
-    -webkit-transform: translateX(0%);
-            transform: translateX(0%);
-  }
-  header {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-  header .header-content {
-    position: absolute;
-    top: 55%;
-    left: 10%;
-    padding-top: 40px;
-    width: 30rem;
-  }
-  header .header-content .header-btn-container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  header .header-content .header-btn-container .learn-btn {
-    margin-bottom: 1rem;
-  }
-  .about {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  .about .about-right h1 {
-    margin-top: 3rem;
-  }
-  .about .about-right p {
-    font-size: 1rem;
-  }
-  footer {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  footer .footer-item {
-    margin-bottom: 2rem;
-  }
+.signup-modal .container {
+  position: relative;
+}
+
+.signup-modal .container .signup-close-btn {
+  position: absolute;
+  width: 2rem;
+  top: 0;
+  right: 10px;
+  cursor: pointer;
+}
+
+.signup-modal .container .logo-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.signup-modal .container .logo-container img {
+  width: 15rem;
+}
+
+.signup-modal .container h3 {
+  font-weight: 400;
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.signup-modal .container .signup-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+.signup-modal .container .signup-content form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 20rem;
+  margin-bottom: 2rem;
+}
+
+.signup-modal .container .signup-content form input {
+  border: 3px solid #ccc;
+  border-radius: 5px;
+  padding: 0.3rem;
+}
+
+.signup-modal .container .signup-content form label {
+  font-family: "Mukta", sans-serif;
+}
+
+.signup-modal .container .signup-content .signup-btn-container {
+  width: 20rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.signup-modal .container .signup-content .signup-btn-container button {
+  cursor: pointer;
+  font-family: "Mukta", sans-serif;
+  font-size: 1.3rem;
+  border: none;
+  border-radius: 0.2rem;
+  background-color: #e3ffea;
+  width: 80%;
+  margin-bottom: 0.5rem;
+}
+
+.signup-modal .container .signup-content .signup-btn-container span {
+  font-family: "Mukta", sans-serif;
+}
+
+.signup-modal .container .signup-content .signup-btn-container span a {
+  text-decoration: underline;
+  color: black;
 }
 
 * {
@@ -409,6 +431,112 @@ a {
   border-radius: 0.2rem;
 }
 
+@media screen and (max-width: 1024px) {
+  .classes .class-list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+  nav {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    z-index: 2;
+    width: 100%;
+    padding: 0rem;
+  }
+  nav .nav-items {
+    position: absolute;
+    right: 0px;
+    height: 100vh;
+    background-color: #E6EAF6;
+    top: 84px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+    -webkit-transition: -webkit-transform 0.5s ease;
+    transition: -webkit-transform 0.5s ease;
+    transition: transform 0.5s ease;
+    transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+    font-size: 2rem;
+  }
+  nav .nav-active {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+  header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+  }
+  header .header-content {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 10%;
+    margin-top: 120px;
+  }
+  header .header-content .header-btn-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  header .header-content .header-btn-container .learn-btn {
+    margin-bottom: 1rem;
+  }
+  .about {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+  }
+  .about .about-right h1 {
+    margin-top: 3rem;
+    font-size: 1rem;
+  }
+  .about .about-right p {
+    font-size: 1rem;
+  }
+  footer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  footer .footer-item {
+    margin-bottom: 2rem;
+  }
+  .signup-modal .container .logo-container img {
+    width: 3rem;
+  }
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -446,6 +574,154 @@ a {
           filter: brightness(90%);
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
+}
+
+.login-modal {
+  display: none;
+  background-color: #FFFFFA;
+  width: 60%;
+  min-width: 20rem;
+  height: 40rem;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  padding: 5rem;
+  z-index: 20;
+}
+
+.login-modal .container {
+  position: relative;
+}
+
+.login-modal .container .close-btn {
+  position: absolute;
+  width: 2rem;
+  top: 0;
+  right: 10px;
+  cursor: pointer;
+}
+
+.login-modal .container .logo-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.login-modal .container .logo-container img {
+  width: 15rem;
+}
+
+.login-modal .container h3 {
+  font-weight: 400;
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.login-modal .container .login-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+.login-modal .container .login-content form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 20rem;
+  margin-bottom: 2rem;
+}
+
+.login-modal .container .login-content form input {
+  border: 3px solid #ccc;
+  border-radius: 5px;
+  padding: 0.3rem;
+}
+
+.login-modal .container .login-content form label {
+  font-family: "Mukta", sans-serif;
+}
+
+.login-modal .container .login-content .login-btn-container {
+  width: 20rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.login-modal .container .login-content .login-btn-container button {
+  cursor: pointer;
+  font-family: "Mukta", sans-serif;
+  font-size: 1.3rem;
+  border: none;
+  border-radius: 0.2rem;
+  background-color: #e3eeff;
+  width: 80%;
+  margin-bottom: 0.5rem;
+}
+
+.login-modal .container .login-content .login-btn-container span {
+  font-family: "Mukta", sans-serif;
+}
+
+.login-modal .container .login-content .login-btn-container span a {
+  text-decoration: underline;
+  color: black;
+}
+
+.login-modal .container .login-content .login-signup {
+  width: 40rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  bottom: -50%;
+}
+
+.login-modal .container .login-content .login-signup span {
+  font-family: "Mukta", sans-serif;
+}
+
+.login-modal .container .login-content .login-signup button {
+  cursor: pointer;
+  font-family: "Mukta", sans-serif;
+  font-size: 1rem;
+  padding: 0.1rem 0.5rem;
+  border: none;
+  background-color: #ffffe3;
+  margin-left: 1rem;
+  margin-bottom: 0.5rem;
+  border-radius: 0.2rem;
 }
 
 .signup-modal {
@@ -646,7 +922,6 @@ header {
   background-repeat: no-repeat;
   background-position: 40% 60%;
   background-size: cover;
-  overflow: hidden;
   position: relative;
 }
 
@@ -657,6 +932,7 @@ header .header-content {
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   width: 60%;
+  height: 100%;
 }
 
 header .header-content h1 {
