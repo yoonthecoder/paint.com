@@ -38,7 +38,8 @@
         width: 100%;
         transform: translateX(100%);
         transition: transform 0.5s ease;
-        font-size: 2rem;
+        font-size: 1.5rem;
+       
       }
 
       .nav-active {
@@ -50,7 +51,7 @@
     header {
       display: flex;
       width: 100%;
-
+      
     .header-content {
       position: absolute;
       width: 100%;
