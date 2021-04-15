@@ -925,7 +925,7 @@ nav .scroll-nav {
 header {
   width: 100%;
   height: 100vh;
-  background: url(/dist/img/header-bg.jpg);
+  background: url(../img/header-bg.jpg);
   background-repeat: no-repeat;
   background-position: 40% 60%;
   background-size: cover;
@@ -982,12 +982,13 @@ header .header-content .header-btn-container .signup-btn {
   font-size: 3.3rem;
   font-weight: 400;
   margin-bottom: 1.8rem;
+ 
 }
 
 .about .about-right p {
   font-family: "Mukta", sans-serif;
   margin-bottom: 1.8rem;
-  font-size: 1.2rem;
+  font-size: 1.2rem; 
 }
 
 .about .about-right button {
